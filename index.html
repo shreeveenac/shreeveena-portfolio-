@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shreeveena C. | Portfolio</title>
+
+<style>
+:root {
+  --pink: #d85d91;
+  --dark: #a83d70;
+  --light: #fff0f6;
+  --text: #493743;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffafd;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation */
+
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #f6dce8;
+  z-index: 10;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  color: var(--dark);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #695563;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+/* Home */
+
+.home {
+  background: linear-gradient(135deg, #fff0f6, #ffe1ed);
+  padding: 75px 22px;
+}
+
+.home-content {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.tag {
+  background: white;
+  color: var(--dark);
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: var(--dark);
+}
+
+.home p {
+  color: #6d5865;
+  font-size: 17px;
+}
+
+.profile {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 10px solid white;
+  outline: 3px solid #e8a8c3;
+  object-fit: cover;
+  object-position: center 25%;
+  justify-self: center;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--pink);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--dark);
+}
+
+/* Common sections */
+
+section {
+  padding: 70px 22px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.small-title {
+  color: var(--pink);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #593c4c;
+  font-size: 34px;
+  margin: 8px 0 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border: 1px solid #f5dce7;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px #9c547010;
+}
+
+.card p {
+  color: #806b78;
+}
+
+/* About */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 22px;
+}
+
+.fact {
+  padding: 12px 0;
+  border-bottom: 1px solid #f7e8ef;
+}
+
+.fact:last-child {
+  border: none;
+}
+
+.fact strong {
+  display: block;
+}
+
+.fact span {
+  color: #806b78;
+}
+
+/* Education */
+
+.education {
+  background: #fff5f9;
+}
+
+.edu-card {
+  border-left: 5px solid var(--pink);
+}
+
+.edu-card h3 {
+  margin: 12px 0;
+}
+
+.pill {
+  background: var(--light);
+  color: var(--dark);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Skills and hobbies */
+
+.skills-grid,
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skill-card {
+  text-align: center;
+}
+
+.skill-card h3 {
+  margin: 10px 0;
+}
+
+.skill-card p {
+  font-size: 14px;
+}
+
+/* Journey */
+
+.journey {
+  background: #fff5f9;
+}
+
+.journey-box {
+  background: white;
+  border: 1px solid #f3d5e2;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* Projects */
+
+.project-card {
+  text-align: center;
+  background: #fff7fa;
+  border: 1px dashed #e7a9c3;
+}
+
+/* Contact */
+
+.contact {
+  background: #ffeaf2;
+  text-align: center;
+}
+
+.contact p {
+  color: #705a67;
+  margin-bottom: 20px;
+}
+
+.email {
+  display: inline-block;
+  background: white;
+  color: var(--dark);
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #f2c8d9;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  background: white;
+  text-align: center;
+  padding: 22px;
+  color: #806b78;
+}
+
+/* Mobile responsive design */
+
+@media(max-width: 720px) {
+
+  .nav {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .home-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile {
+    width: 200px;
+    height: 200px;
+    grid-row: 1;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid,
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 55px 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<header>
+<div class="nav">
+
+<div class="logo">Shreeveena C.</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#journey">My Journey</a>
+<a href="#interests">Interests</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<!-- Home Section -->
+
+<section class="home" id="home">
+
+<div class="home-content">
+
+<div>
+<span class="tag">First-year CSE Student</span>
+
+<h1>Hello, I'm <span>Shreeveena C.</span></h1>
+
+<p>
+Welcome to my personal portfolio!
+I'm beginning my journey in Computer Science
+Engineering, exploring technology, creativity
+and new ideas.
+</p>
+
+<a href="#about" class="btn">Get to know me</a>
+</div>
+
+<img src="profile.jpg"
+class="profile"
+alt="Shreeveena's photograph">
+
+</div>
+</section>
+
+<!-- About Section -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="small-title">A little about me</div>
+<h2>About Me</h2>
+
+<div class="about-grid">
+
+<div class="card">
+<p>
+I'm Shreeveena C, from Chitradurga.
+I'm currently pursuing my first year of
+Computer Science Engineering at BGS College
+of Engineering and Technology.
+
+I enjoy learning something new and bringing
+ideas to life through design. I'm at the
+beginning of my engineering journey and
+excited to keep growing, one step at a time.
+</p>
+</div>
+
+<div class="card">
+
+<div class="fact">
+<strong>Native Place</strong>
+<span>Chitradurga, Karnataka</span>
+</div>
+
+<div class="fact">
+<strong>Current Study</strong>
+<span>First-year Computer Science Engineering</span>
+</div>
+
+<div class="fact">
+<strong>Learning</strong>
+<span>Python Programming</span>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- Education Section -->
+
+<section class="education" id="education">
+
+<div class="container">
+
+<div class="small-title">My studies</div>
+<h2>Education</h2>
+
+<div class="card edu-card">
+
+<span class="pill">Currently Studying</span>
+
+<h3>BGS College of Engineering and Technology</h3>
+
+<p>Computer Science and Engineering</p>
+<p>First Year</p>
+
+</div>
+</div>
+</section>
+
+<!-- Skills Section -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="small-title">What I'm learning</div>
+<h2>My Skills</h2>
+
+<div class="skills-grid">
+
+<div class="card skill-card">
+<h3>Python</h3>
+<p>
+Learning the basics of programming
+and building my coding confidence.
+</p>
+</div>
+
+<div class="card skill-card">
+<h3>Curiosity</h3>
+<p>
+Always ready to learn something new
+and explore fresh ideas.
+</p>
+</div>
+
+<div class="card skill-card">
+<h3>Creativity</h3>
+<p>
+Enjoying design and expressing ideas
+through drawing.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Learning Journey -->
+
+<section class="journey" id="journey">
+
+<div class="container">
+
+<div class="small-title">Every expert starts somewhere</div>
+<h2>My Learning Journey</h2>
+
+<div class="journey-box">
+
+<h3>One Step at a Time</h3>
+
+<p>
+I'm starting my journey in CSE with an open mind.
+My goal is to become a software engineer and
+also explore opportunities in the banking sector.
+
+I'm looking forward to learning, practising
+and creating projects as I gain experience.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- Interests and Hobbies -->
+
+<section id="interests">
+
+<div class="container">
+
+<div class="small-title">Things I enjoy</div>
+<h2>My Interests & Hobbies</h2>
+
+<div class="interest-grid">
+
+<div class="card skill-card">
+<h3>Reading Books</h3>
+<p>Enjoying stories and learning from books.</p>
+</div>
+
+<div class="card skill-card">
+<h3>Listening to Music</h3>
+<p>Music is one of my favourite ways to relax.</p>
+</div>
+
+<div class="card skill-card">
+<h3>Drawing</h3>
+<p>Sometimes I enjoy making drawings.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="small-title">More to come</div>
+<h2>My Projects</h2>
+
+<div class="card project-card">
+
+<h3>Coming Soon!</h3>
+
+<p>
+I'm building my knowledge and looking forward
+to sharing my first projects here.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="small-title">Let's connect</div>
+<h2>Contact Me</h2>
+
+<p>
+Thank you for visiting my portfolio!
+If you'd like to connect, feel free to
+send me an email.
+</p>
+
+<a class="email"
+href="mailto:shreeveenac@gmail.com">
+shreeveenac@gmail.com
+</a>
+
+</div>
+</section>
+
+<footer>
+Made by Shreeveena C. | 2026
+</footer>
+
+</body>
+</html>
